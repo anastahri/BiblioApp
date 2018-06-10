@@ -1,0 +1,37 @@
+<template name="sidebarMenu">
+  <!-- Left side column: the sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        {{#if isInRole 'admin'}}
+          {{> adminMenu}}
+        {{/if}}
+        {{> regularMenu}}
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+</template>
+
+<template name="adminMenu">
+  <li class="header">ADMIN MENU</li>
+  <li class="{{isActiveRoute regex='admin.users'}} treeview">
+    <a href="#">
+      <i class="fa fa-user"></i> <span>Users Management</span> <i class="fa fa-angle-left pull-right"></i>
+    </a>
+    <ul class="treeview-menu">
+      <li class="{{isActiveRoute 'admin.users.add'}}"><a href="{{pathFor route='admin.users.add'}}"><i class="fa fa-plus-circle"></i> Add a user</a></li>
+      <li class="{{isActiveRoute 'admin.users'}}"><a href="{{pathFor route='admin.users'}}"><i class="fa fa-list-alt"></i> View all</a></li>
+    </ul>
+  </li>
+  <li class="{{isActiveRoute 'admin.books'}}"><a href="{{pathFor route='admin.books'}}"><i class="fa fa-book"></i> <span>Books Management</span></a></li>
+</template>
+
+<template name="regularMenu">
+  <li class="header">LABELS</li>
+  <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
+  <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
+  <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+</template>

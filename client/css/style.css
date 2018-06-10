@@ -1,0 +1,42 @@
+/* .wrapper {
+    width: 100%;
+    min-height: 100%;
+    height: auto !important;
+    position: absolute;
+}
+.content-wrapper{
+    bottom: 50px;
+    position: fixed;
+    width: 100%;
+    top: 50px;
+}
+.main-footer{
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+} */
+
+html, body {
+    height: auto !important;
+    min-height: 100vh !important;
+}
+.wrapper {
+    height: auto !important;
+    min-height: 100vh !important;
+}
+
+.content-wrapper{
+    height: auto !important;
+    min-height: 87vh !important;
+}
+
+.content{
+    height: auto !important;
+    min-height: 100% !important;
+}
+.userElt{
+    cursor: pointer;
+}
+.addBookTitle{
+    cursor: pointer;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "test",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.48",
+    "bcrypt": "^2.0.1",
+    "meteor-node-stubs": "^0.4.1",
+    "moment": "^2.22.2",
+    "simpl-schema": "^1.5.0"
+  }
+}

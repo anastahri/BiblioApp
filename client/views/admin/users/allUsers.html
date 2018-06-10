@@ -1,0 +1,40 @@
+<template name="allUsers">
+
+		{{#if isInRole 'admin'}}
+		<div class="box box-primary">
+		  <div class="box-header with-border">
+		    <h3 class="box-title">All users</h3>
+		  </div><!-- /.box-header -->
+		  <div class="box-body table-responsive no-padding">
+		  	<table class="table table-hover">
+		  		<thead>
+			  		<tr>
+			  			<th>Username</th>
+			  			<th>Email</th>
+			  			<th>Admin</th>
+			  			<th>Created At</th>
+			  			<th>Actions</th>
+			  		</tr>
+		  		</thead>
+		  		<tbody>
+			  		{{#each users}}
+			  		<tr>
+			  			<td class="userElt">{{username}}</td>
+			  			<td class="userElt">{{userEmail}}</td>
+			  			<td class="userElt">{{isAdmin}}</td>
+			  			<td class="userElt">{{momentCreatedAt}}</td>
+			  			<td>
+			  				<button class="btn {{isAdminButton}} toggle-admin">Admin</button>
+			  				<button class="btn btn-danger deleteUser"><i class="fa fa-trash"></i> Delete</button>
+			  			</td>
+			  		</tr>
+			  		{{/each}}
+		  		</tbody>
+		  	</table>
+		  </div><!-- ./box-body -->
+		</div>
+		{{else}}
+		<h3>Access denied!</h3>
+		{{/if}}
+
+</template>

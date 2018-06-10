@@ -1,0 +1,43 @@
+<template name="userMenu">
+  <div class="navbar-custom-menu">
+    <ul class="nav navbar-nav">
+      <!-- User Account: style can be found in dropdown.less -->
+      <li class="dropdown user user-menu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <span class="hidden-xs">{{userName}}</span>
+          <span class="user-image"><i class="fa fa-user"></i></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li class="user-header">
+            <p>
+              {{userName}}
+              <small>{{userEmail}}</small>
+            </p>
+          </li>
+          <li class="user-footer">
+            <div class="pull-left">
+              <a href="{{pathFor route='profile'}}" class="btn btn-default btn-flat">Profile</a>
+            </div>
+            <div class="pull-right">
+              <a id="sign_out" href="#" class="btn btn-default btn-flat">Sign out</a>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<template name="loginNav">
+  <div class="navbar-custom-menu">
+    <ul class="nav navbar-nav">
+      <!-- User Account: style can be found in dropdown.less -->
+      <li class="user user-menu">
+        <a href="{{pathFor route='signup'}}">Register</a>
+      </li>
+      <li class="user user-menu">
+        <a href="{{pathFor route='signin'}}">Log in</a>
+      </li>
+    </ul>
+  </div>
+</template>
