@@ -29,8 +29,7 @@ Template.allUsers.helpers({
 });
 
 Template.allUsers.events({
-	'click .userElt': function() {
-		console.log(this);
+	'click .userElt': function() { //TODO: Show modal => Edit User
 		Session.set('selectedUser', this);
 	},
 	'click .toggle-admin': function() {

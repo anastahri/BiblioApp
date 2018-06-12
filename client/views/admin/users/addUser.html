@@ -1,52 +1,50 @@
 <template name="addUser">
-	
 		{{#if isInRole 'admin'}}
 		<div class="box box-primary">
 		  <div class="box-header with-border">
 		    <h3 class="box-title">Add a user</h3>
 		  </div><!-- /.box-header -->
 		  <div class="box-body">
-		  	
-				<form class="addUser">
-							{{#if showSuccess}}
-						    <div class="alert alert-success">
-		              <h4><i class="icon fa fa-info"></i> {{showSuccess}}</h4>
-		            </div>
-						  {{/if}}
-							{{#if showError}}
-						    <div class="alert alert-danger">
-		              <h4><i class="icon fa fa-info"></i> Check this error!</h4>
-		              {{showError}}
-		            </div>
-						  {{/if}}
-					    <div class="form-group">
-					      <label for="username">Username</label>
-					      <input type="text" class="form-control" id="username" name="username" placeholder="Username" autocomplete="username" required>
-					    </div>
-					    <div class="form-group">
-					      <label for="email">Email</label>
-					      <input type="email" class="form-control" id="email" name="email" placeholder="Email" autocomplete="email" required>
-					    </div>
-					    <div class="form-group">
-					      <label for="password">Password</label>
-					      <input type="password" class="form-control" id="password" name="password" placeholder="Password" autocomplete="foo" required>
-					    </div>
-					    <div class="form-group">
-					      <label for="passwordConfirmation">Password (again)</label>
-					      <input type="password" class="form-control" id="passwordConfirmation" name="passwordConfirmation" placeholder="Password confirmation" autocomplete="foo" required>
-					    </div>
-					    <div class="form-group">
-					    	<label>Role</label><br>
-					      <label><input type="radio" name="role" value="user" checked="checked"> User</label><br>
-					      <label><input type="radio" name="role" value="admin"> Admin</label>
-					    </div>
-					    <button type="submit" class="btn btn-primary">Add User</button>
-				</form>
-				
+		  	<div class="col-md-6 col-md-offset-3">
+					<form class="addUser">
+						{{#if showSuccess}}
+					    <div class="alert alert-success">
+	              <h4><i class="icon fa fa-info"></i> {{showSuccess}}</h4>
+	            </div>
+					  {{/if}}
+						{{#if showError}}
+					    <div class="alert alert-danger">
+	              <h4><i class="icon fa fa-info"></i> Check this error!</h4>
+	              {{showError}}
+	            </div>
+					  {{/if}}
+				    <div class="form-group">
+				      <label for="username">Username</label>
+				      <input type="text" class="form-control" id="username" name="username" placeholder="Username" autocomplete="username" required>
+				    </div>
+				    <div class="form-group">
+				      <label for="email">Email</label>
+				      <input type="email" class="form-control" id="email" name="email" placeholder="Email" autocomplete="email" required>
+				    </div>
+				    <div class="form-group">
+				      <label for="password">Password</label>
+				      <input type="password" class="form-control" id="password" name="password" placeholder="Password" autocomplete="foo" required>
+				    </div>
+				    <div class="form-group">
+				      <label for="passwordConfirmation">Password (again)</label>
+				      <input type="password" class="form-control" id="passwordConfirmation" name="passwordConfirmation" placeholder="Password confirmation" autocomplete="foo" required>
+				    </div>
+				    <div class="form-group">
+				    	<label>Role</label><br>
+				      <label><input type="radio" name="role" value="user" checked="checked"> User</label><br>
+				      <label><input type="radio" name="role" value="admin"> Admin</label>
+				    </div>
+				    <button type="submit" class="btn btn-primary btn-block btn-flat">Add User</button>
+					</form>
+				</div>
 			</div>
 		</div>
 		{{else}}
 			<h3>Access denied!</h3>
-		{{/if}}
-	
+		{{/if}}	
 </template>

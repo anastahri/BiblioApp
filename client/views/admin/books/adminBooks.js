@@ -33,9 +33,9 @@ Template.adminBooks.helpers({
 });
 
 Template.adminBooks.events({
-	'click #toggle-collapse, click .addBookTitle': function() {
-		var toggleSign = document.getElementById("toggle-sign");
-		var boxBody = document.getElementById("boxBody");
+	'click .addBookBoxHeader': function() {
+		let toggleSign = document.getElementById("toggle-sign");
+		let boxBody = document.getElementById("boxBody");
 		
 		if(Template.instance().boxBodyCollapsed.get('show')) {
 

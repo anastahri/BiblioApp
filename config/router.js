@@ -1,21 +1,21 @@
 Router.configure({
-    layoutTemplate: 'appLayout',
+  layoutTemplate: 'appLayout',
 });
 
 AccountsTemplates.configureRoute('signIn', {
-    name: 'signin',
-    path: '/login',
-    template: 'accountsLogin',
-    layoutTemplate: 'appLayout',
-    redirect: '/',
+  name: 'signin',
+  path: '/login',
+  template: 'accountsLogin',
+  layoutTemplate: 'appLayout',
+  redirect: '/',
 });
 
 AccountsTemplates.configureRoute('signUp', {
-    name: 'signup',
-    path: '/register',
-    template: 'accountsRegister',
-    layoutTemplate: 'appLayout',
-    redirect: '/',
+  name: 'signup',
+  path: '/register',
+  template: 'accountsRegister',
+  layoutTemplate: 'appLayout',
+  redirect: '/',
 });
 
 Router.route('/', {
@@ -56,5 +56,5 @@ Router.route('/admin/books', {
 });
 
 Router.plugin('ensureSignedIn', {
-    only: ['profile', 'admin.users', 'admin.users.add', 'admin.books']
+  only: ['profile', 'admin.users', 'admin.users.add', 'admin.books']
 });
